@@ -158,13 +158,13 @@ export default class extends Component {
   componentWillMount () {
     this._registerEvents()
     this._startLocalVideo()
-    this._startLocalAudio()
+    //this._startLocalAudio()
   }
 
   componentWillUnmount () {
     this._unregisterEvents()
     this._stopLocalVideo()
-    this._stopLocalAudio()
+    //this._stopLocalAudio()
   }
 
   /**

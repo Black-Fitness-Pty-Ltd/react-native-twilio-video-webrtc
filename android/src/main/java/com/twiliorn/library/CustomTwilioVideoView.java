@@ -394,7 +394,9 @@ public class CustomTwilioVideoView extends View implements LifecycleEventListene
         this.enableNetworkQualityReporting = enableNetworkQualityReporting;
 
         // Share your microphone
-        localAudioTrack = LocalAudioTrack.create(getContext(), enableAudio);
+        if (enableAudio) {
+            localAudioTrack = LocalAudioTrack.create(getContext(), enableAudio);
+        }
 
         if (cameraCapturer == null) {
             boolean createVideoStatus = createLocalVideo(enableVideo);
